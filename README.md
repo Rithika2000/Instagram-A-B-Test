@@ -33,11 +33,14 @@ The algorithm considers the following:
 - **Final Score**: Combine multiple scores into a `final_recommendation_score`
 - **Diversity Logic**: Ensure feed variety (post type, creators)
 
+  <img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/7e63d430-cc81-4a70-8dfd-d7aee5826d06" />
+
+
 ---
 
 ## 🧪 Part 2: A/B Testing — Interest Hashtags vs. Influencers
 
-We evaluate whether recommending trending hashtag content leads to higher engagement than featuring influencer content.
+Will showing users more posts that match their interests (based on hashtags) lead to higher engagement than showing them posts from popular influencers (verified accounts with high followers)?
 
 ### ✅ 1. Hypothesis
 
@@ -108,25 +111,18 @@ df_B = df[(df['ab_group'] == 'B') & (df['is_influencer_post'])]
 
 Compute t-statistic:
 
-\[
-t = \frac{\bar{x}_A - \bar{x}_B}{\sqrt{\frac{s_A^2}{n_A} + \frac{s_B^2}{n_B}}}
-\]
+<img width="656" height="192" alt="image" src="https://github.com/user-attachments/assets/7b9f9813-9e49-42f4-8b7a-6f2dd3445000" />
 
 Where:
 - \(\bar{x}\): Mean of engagement rate
 - \(s^2\): Sample variance
 - \(n\): Sample size
-
 ---
 
 ### 🧮 8. Degrees of Freedom
 
 Use Welch–Satterthwaite formula:
-
-\[
-df = \frac{(s_A^2/n_A + s_B^2/n_B)^2}{\frac{(s_A^2/n_A)^2}{n_A-1} + \frac{(s_B^2/n_B)^2}{n_B-1}}
-\]
-
+<img width="636" height="200" alt="image" src="https://github.com/user-attachments/assets/d34ec4c9-2de1-4b36-ace0-2dddfe465f25" />
 ---
 
 ### 🧪 9. p-Value Computation
