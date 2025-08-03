@@ -113,11 +113,6 @@ Compute t-statistic:
 
 <img width="656" height="192" alt="image" src="https://github.com/user-attachments/assets/7b9f9813-9e49-42f4-8b7a-6f2dd3445000" />
 
-Where:
-- \(\bar{x}\): Mean of engagement rate
-- \(s^2\): Sample variance
-- \(n\): Sample size
----
 
 ### 🧮 8. Degrees of Freedom
 
